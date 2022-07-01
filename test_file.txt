@@ -1,1 +1,2 @@
 This is line was added via feature1 branch.
+From feature2 this line was added.
