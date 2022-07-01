@@ -1,0 +1,74 @@
+1. Create a local folder and initialize it for git;
+	mkdir ./module_3_homework
+	git init ./module_3_homework
+	cd ./module_3_homework
+
+2. Create a text file in the folder and commit it;
+	touch test_file.txt
+	git status
+	git add .
+	git commit -m "Added test_file.txt"
+
+3. Create a remote repository on GitHub;
+	https://github.com/valyapradun/module_3_homework
+
+4. Push the local repository to GitHub;
+	git remote add origin https://github.com/valyapradun/module_3_homework.git
+	git push --set-upstream origin master
+
+5. Create a new branch (develop) and switch to it;
+	git branch develop
+	git checkout develop
+	git push --set-upstream origin develop
+
+6. Create a new branch from 'develop' and switch to it;
+	git branch feature1
+	git checkout feature1
+
+7. Add the first line in the text file, commit, and push to remote;
+	git status
+	git add .
+	git commit -m "Added first line in test_file.txt via feature1"
+	git push --set-upstream origin feature1
+
+8. Clone your repository from GitHub into a separate folder;
+	cd ../
+	mkdir homework_folder2
+	cd ./homework_folder2
+	git clone https://github.com/valyapradun/module_3_homework.git
+	cd ./module_3_homework
+
+9. Create another branch from 'develop' and switch to it using cloned project;
+	git branch
+	git checkout develop
+	git pull
+	git branch feature2
+	git checkout feature2
+
+10. Add the first line of the text file (different from the first branch), 
+    commit, and push on remote;
+	git status
+	git add .
+	git commit -m "Added first line in test_file.txt via feature2"
+	git push --set-upstream origin feature2
+	
+11. Switch to develop;
+	git checkout develop
+
+12  Merge the first branch and push changes;
+	git merge origin/feature1
+	git push
+
+13. Merge the second branch and push changes;
+	git merge feature2
+
+14. Resolve conflict;
+	git status
+	git add test_file.txt
+	git commit -m "Resolved conflict"
+	git push
+
+16. Commit and push a separate text file with a list of all the commands, which were used to solve the problem;
+	git add VPradunModule3.txt
+	git commit -m "Added file with all git command for homework"
+	git push
